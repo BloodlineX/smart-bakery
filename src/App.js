@@ -65,7 +65,7 @@ function App() {
         <h2 className="text-3xl font-heading mb-8 text-yellow-800" data-aos="fade-up">Our Menu</h2>
         <div className="grid md:grid-cols-3 gap-6 px-8">
           {[
-            { src: `${process.env.PUBLIC_URL}/bread1.jpg`, title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
+            { src: `${process.env.PUBLIC_URL}/bread.jpg`, title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
             { src: `${process.env.PUBLIC_URL}/cake1.jpg`, title: "Cakes", desc: "Chocolate, vanilla, fruit — all made fresh daily." },
             { src: `${process.env.PUBLIC_URL}/pastry1.jpg`, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
           ].map((item, i) => (
