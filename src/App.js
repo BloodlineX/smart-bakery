@@ -7,6 +7,33 @@ function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  // 💌 Form Submit Handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbytXMG9yU3M2hFDQ1TI14vSNibmZ42854xLZbHih4BPP11HLdz_n9AbmY_e9XX1lQFE/exec";
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        body: data,
+      });
+
+      if (res.ok) {
+        alert("🎉 Order received! We’ll get baking right away!");
+        form.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Error!", err.message);
+      alert("⚠️ Network error. Please try again.");
+    }
+  };
+
   return (
     <div className="font-sans">
       <header className="bg-yellow-100 shadow">
@@ -70,11 +97,7 @@ function App() {
       <section id="order" className="py-12 bg-pink-50">
         <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
           <h2 className="text-2xl font-heading mb-6 text-center">🍰 Place Your Order</h2>
-          <form
-            action="https://script.google.com/macros/s/AKfycbytXMG9yU3M2hFDQ1TI14vSNibmZ42854xLZbHih4BPP11HLdz_n9AbmY_e9XX1lQFE/exec"
-            method="POST"
-            className="space-y-4"
-          >
+          <form onSubmit={handleSubmit} className="space-y-4" id="order-form">
             <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded" />
             <input type="tel" name="phone" placeholder="Phone Number" required className="w-full border p-2 rounded" />
             <input type="text" name="item" placeholder="What would you like? (e.g., Chocolate Cake)" required className="w-full border p-2 rounded" />
