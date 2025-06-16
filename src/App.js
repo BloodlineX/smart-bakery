@@ -28,7 +28,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbytXMG9yU3M2hFDQ1TI14vSNibmZ42854xLZbHih4BPP11HLdz_n9AbmY_e9XX1lQFE/exec",
+        "https://script.google.com/macros/s/AKfycbzzxjHPOs0cX9U_Co0cCazT8LkDyTg5Zx-7v9K55LTCrE9AIxQEf8tRMe71YVfF9JxQpw/exec",
         {
           method: "POST",
           body: new URLSearchParams(formData),
