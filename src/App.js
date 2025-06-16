@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -7,31 +7,45 @@ function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 💌 Form Submit Handler
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    item: "",
+    quantity: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    const scriptURL = "https://script.google.com/macros/s/AKfycbytXMG9yU3M2hFDQ1TI14vSNibmZ42854xLZbHih4BPP11HLdz_n9AbmY_e9XX1lQFE/exec";
+    setIsSubmitting(true);
 
     try {
-      const res = await fetch(scriptURL, {
-        method: "POST",
-        body: data,
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbytXMG9yU3M2hFDQ1TI14vSNibmZ42854xLZbHih4BPP11HLdz_n9AbmY_e9XX1lQFE/exec",
+        {
+          method: "POST",
+          body: new URLSearchParams(formData),
+        }
+      );
 
-      if (res.ok) {
-        alert("🎉 Order received! We’ll get baking right away!");
-        form.reset();
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", phone: "", item: "", quantity: "", message: "" });
       } else {
-        alert("❌ Something went wrong. Please try again.");
+        alert("Something went wrong. Try again.");
       }
-    } catch (err) {
-      console.error("Error!", err.message);
-      alert("⚠️ Network error. Please try again.");
+    } catch (error) {
+      alert("Failed to submit. Please check your internet.");
     }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -93,17 +107,24 @@ function App() {
         <p className="font-body">Email: hello@thegoldenratio.com | Phone: +91 98765 3210</p>
       </section>
 
-      {/* Order Form */}
+      {/* Order Section with Smooth Form */}
       <section id="order" className="py-12 bg-pink-50">
         <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
           <h2 className="text-2xl font-heading mb-6 text-center">🍰 Place Your Order</h2>
-          <form onSubmit={handleSubmit} className="space-y-4" id="order-form">
-            <input type="text" name="name" placeholder="Full Name" required className="w-full border p-2 rounded" />
-            <input type="tel" name="phone" placeholder="Phone Number" required className="w-full border p-2 rounded" />
-            <input type="text" name="item" placeholder="What would you like? (e.g., Chocolate Cake)" required className="w-full border p-2 rounded" />
-            <input type="number" name="quantity" placeholder="Quantity" required className="w-full border p-2 rounded" />
-            <textarea name="message" placeholder="Special Instructions" className="w-full border p-2 rounded" />
-            <button type="submit" className="w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600">Submit Order</button>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {submitted && (
+              <div className="text-green-600 font-semibold bg-green-100 border border-green-300 p-3 rounded">
+                🎉 Order submitted successfully!
+              </div>
+            )}
+            <input type="text" name="name" placeholder="Full Name" required value={formData.name} onChange={handleChange} className="w-full border p-2 rounded" />
+            <input type="tel" name="phone" placeholder="Phone Number" required value={formData.phone} onChange={handleChange} className="w-full border p-2 rounded" />
+            <input type="text" name="item" placeholder="What would you like? (e.g., Chocolate Cake)" required value={formData.item} onChange={handleChange} className="w-full border p-2 rounded" />
+            <input type="number" name="quantity" placeholder="Quantity" required value={formData.quantity} onChange={handleChange} className="w-full border p-2 rounded" />
+            <textarea name="message" placeholder="Special Instructions" value={formData.message} onChange={handleChange} className="w-full border p-2 rounded" />
+            <button type="submit" disabled={isSubmitting} className={`w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}>
+              {isSubmitting ? "Submitting..." : "Submit Order"}
+            </button>
           </form>
         </div>
       </section>
