@@ -67,7 +67,7 @@ function App() {
           {[
             { src: `${process.env.PUBLIC_URL}/bread1.jpg`, title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
             { src: `${process.env.PUBLIC_URL}/cake1.jpg`, title: "Cakes", desc: "Chocolate, vanilla, fruit — all made fresh daily." },
-            { src: `${process.env.PUBLIC_URL}/pastry.jpg`, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
+            { src: `${process.env.PUBLIC_URL}/pastry1.jpg`, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
               <img src={item.src} alt={item.title} className="w-full h-85 object-cover rounded" />
