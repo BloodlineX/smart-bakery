@@ -23,7 +23,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="relative text-center py-10 bg-pink-100">
-        <img src="/cake.jpg" alt="Delicious Cake" className="w-full h-[600px] object-cover opacity-80" />
+        <img src={`${process.env.PUBLIC_URL}/cake.jpg`} alt="Delicious Cake" className="w-full h-[600px] object-cover opacity-80" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 text-white">
           <h2 className="text-4xl font-heading drop-shadow-lg text-yellow-200 animate-pulse">
             Freshly Baked. Purely Delicious.
@@ -38,9 +38,9 @@ function App() {
         <h2 className="text-3xl font-heading mb-8 text-yellow-800" data-aos="fade-up">Our Menu</h2>
         <div className="grid md:grid-cols-3 gap-6 px-8">
           {[
-            { src: "/bread1.jpg", title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
-            { src: "/cake1.jpg", title: "Cakes", desc: "Chocolate, vanilla, fruit — all made fresh daily." },
-            { src: "/pastry.jpg", title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
+            { src: {`${process.env.PUBLIC_URL}/bread1.jpg`}, title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
+            { src: {`${process.env.PUBLIC_URL}/cake1.jpg`}, title: "Cakes", desc: "Chocolate, vanilla, fruit — all made fresh daily." },
+            { src: {`${process.env.PUBLIC_URL}/pastry.jpg`}, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
               <img src={item.src} alt={item.title} className="w-full h-85 object-cover rounded" />
@@ -89,7 +89,7 @@ function App() {
       <section id="owner" className="py-10 bg-yellow-100 text-center">
         <h2 className="text-3xl font-heading text-yellow-900 mb-4" data-aos="fade-up">Meet the Owner</h2>
         <div className="flex flex-col items-center" data-aos="zoom-in">
-          <img src="/owner.jpg" alt="Bakery Owner" className="w-32 h-32 rounded-full object-cover mb-4" />
+          <img src={`${process.env.PUBLIC_URL}/owner.jpg`} alt="Bakery Owner" className="w-32 h-32 rounded-full object-cover mb-4" />
           <h3 className="text-xl font-heading">Bhaskar Chauhan</h3>
           <p className="font-body">Founder of The Golden Ratio Bakery</p>
         </div>

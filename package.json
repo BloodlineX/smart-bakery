@@ -2,7 +2,7 @@
   "name": "smart-bakery",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://BloodlineX.github.io/smart-bakery/",
+  "homepage": "https://BloodlineX.github.io/smart-bakery/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -17,11 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
