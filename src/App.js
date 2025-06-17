@@ -87,7 +87,7 @@ function App() {
             { src: `${process.env.PUBLIC_URL}/croissants.jpg`, title: "Croissants", desc: "Buttery layers, plain or cheese-filled." },
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
-              <img src={item.src} alt={item.title} className="w-full h-60 object-cover rounded" />
+              <img src={item.src} alt={item.title} className="w-full h-80 object-cover rounded" />
               <h3 className="mt-4 text-xl font-heading">{item.title}</h3>
               <p className="mt-2 text-sm text-gray-600 font-body">{item.desc}</p>
             </div>
