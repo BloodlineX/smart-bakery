@@ -81,10 +81,13 @@ function App() {
           {[
             { src: `${process.env.PUBLIC_URL}/bread.jpg`, title: "Breads", desc: "Crusty sourdough, soft rolls, and more." },
             { src: `${process.env.PUBLIC_URL}/cake1.jpg`, title: "Cakes", desc: "Chocolate, vanilla, fruit — all made fresh daily." },
-            { src: `${process.env.PUBLIC_URL}/pastry1.jpg`, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." }
+            { src: `${process.env.PUBLIC_URL}/pastry1.jpg`, title: "Pastries", desc: "Swirls, tarts, puffs and cookies with love." },
+            { src: `${process.env.PUBLIC_URL}/donuts.jpg`, title: "Donuts", desc: "Glazed, chocolate-filled, and sprinkled." },
+            { src: `${process.env.PUBLIC_URL}/muffins.jpg`, title: "Muffins", desc: "Berry burst, choco chip, and banana walnut." },
+            { src: `${process.env.PUBLIC_URL}/croissants.jpg`, title: "Croissants", desc: "Buttery layers, plain or cheese-filled." },
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
-              <img src={item.src} alt={item.title} className="w-full h-85 object-cover rounded" />
+              <img src={item.src} alt={item.title} className="w-full h-60 object-cover rounded" />
               <h3 className="mt-4 text-xl font-heading">{item.title}</h3>
               <p className="mt-2 text-sm text-gray-600 font-body">{item.desc}</p>
             </div>
@@ -107,7 +110,7 @@ function App() {
         <p className="font-body">Email: hello@thegoldenratio.com | Phone: +91 98765 3210</p>
       </section>
 
-      {/* Order Section with Smooth Form */}
+      {/* Order Section */}
       <section id="order" className="py-12 bg-pink-50">
         <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
           <h2 className="text-2xl font-heading mb-6 text-center">🍰 Place Your Order</h2>
