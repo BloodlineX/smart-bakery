@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/smart-bakery/static/css/main.00b00542.css",
-    "main.js": "/smart-bakery/static/js/main.cce5d318.js",
+    "main.css": "/smart-bakery/static/css/main.cc84f9c8.css",
+    "main.js": "/smart-bakery/static/js/main.d369b3a2.js",
     "static/js/453.39149bcf.chunk.js": "/smart-bakery/static/js/453.39149bcf.chunk.js",
     "index.html": "/smart-bakery/index.html",
-    "main.00b00542.css.map": "/smart-bakery/static/css/main.00b00542.css.map",
-    "main.cce5d318.js.map": "/smart-bakery/static/js/main.cce5d318.js.map",
+    "main.cc84f9c8.css.map": "/smart-bakery/static/css/main.cc84f9c8.css.map",
+    "main.d369b3a2.js.map": "/smart-bakery/static/js/main.d369b3a2.js.map",
     "453.39149bcf.chunk.js.map": "/smart-bakery/static/js/453.39149bcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00b00542.css",
-    "static/js/main.cce5d318.js"
+    "static/css/main.cc84f9c8.css",
+    "static/js/main.d369b3a2.js"
   ]
 }
