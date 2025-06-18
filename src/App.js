@@ -225,7 +225,7 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="py-10 bg-white text-center">
-        <h2 className="text-3xl font-heading text-yellow-900 mb-4" data-aos="fade-up">
+        <h2 className="text-4xl font-heading text-yellow-900 mb-4" data-aos="fade-up">
           Contact
         </h2>
         <p className="font-body">
