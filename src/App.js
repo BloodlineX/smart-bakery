@@ -80,9 +80,9 @@ return ( <div className="font-sans"> <header className="bg-yellow-100 shadow"> <
           items: ["Chocolate", "Blueberry", "Banana", "Vanilla"],
         },
         {
-          src: `${process.env.PUBLIC_URL}/cupcake.jpg`,
+          src: `${process.env.PUBLIC_URL}/cupcakes.jpg`,
           title: "Cupcakes",
-          items: ["Red Velvet", "Chocolate", "Vanilla", "Lemon"],
+          items: ["vanilla", "Chocolate","Cream filled", ],
         },
       ].map((item, i) => (
         <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
