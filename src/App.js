@@ -80,7 +80,7 @@ return ( <div className="font-sans"> <header className="bg-yellow-100 shadow"> <
           items: ["Chocolate", "Blueberry", "Banana", "Vanilla"],
         },
         {
-          src: `${process.env.PUBLIC_URL}/cupcake.jpg`,
+          src: `${process.env.PUBLIC_URL}/Cupcake.jpg`,
           title: "Cupcakes",
           items: ["vanilla", "Chocolate","Cream filled", ],
         },
