@@ -116,13 +116,13 @@ function App() {
               items: ["Chocolate", "Blueberry", "Banana", "Vanilla"],
             },
             {
-              src: `${process.env.PUBLIC_URL}/cupcake.jpg`,
+              src: `${process.env.PUBLIC_URL}/Cupcake.jpg`,
               title: "Cupcakes",
               items: ["Red Velvet", "Chocolate", "Vanilla", "Lemon"],
             },
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 shadow-md rounded-lg p-4" data-aos="zoom-in">
-              <img src={item.src} alt={item.title} className="w-full h-64 object-cover rounded" />
+              <img src={item.src} alt={item.title} className="w-full h-96 object-cover rounded" />
               <h3 className="mt-4 text-xl font-heading">{item.title}</h3>
               <ul className="mt-2 text-sm text-gray-600 font-body text-left list-disc list-inside">
                 {item.items.map((flavour, j) => (
