@@ -39,7 +39,7 @@ const addToCart = (item) => { setCart([...cart, item]); };
 return ( <div className="font-sans"> <header className="bg-yellow-100 shadow"> <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"> <h1 className="text-2xl font-heading text-yellow-900 drop-shadow-md">The Golden Ratio Bakery</h1> <ul className="flex gap-6 text-yellow-800 font-semibold font-body"> <li><a href="#menu">Menu</a></li> <li><a href="#about">About</a></li> <li><a href="#contact">Contact</a></li> <li><a href="#order">Order</a></li> </ul> </nav> </header>
 
 <section className="relative text-center py-10 bg-pink-100">
-    <img src={`${process.env.PUBLIC_URL}/cake.jpg`} alt="Delicious Cake" className="w-full h-[600px] object-cover opacity-80" />
+    <img src={`${process.env.PUBLIC_URL}/cake.jpg`} alt="Delicious Cake" className="w-full h-[700px] object-cover opacity-80" />
     <div className="absolute top-1/3 left-1/2 -translate-x-1/2 text-white">
       <h2 className="text-4xl font-heading drop-shadow-lg text-yellow-200 animate-pulse">
         Freshly Baked. Purely Delicious.
