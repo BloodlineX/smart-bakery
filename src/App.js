@@ -229,7 +229,7 @@ function App() {
           Contact
         </h2>
         <p className="font-body">
-          Email: hello@thegoldenratio.com | Phone: +91 98765 3210
+          Email: hello@thegoldenratio.com | Phone: +91 98765 3210 | ADD PROPER ADDRESS IN SPECIAL INSTRUCTION SECTION LIKE city , street no , any famous building or park near you
         </p>
       </section>
 
