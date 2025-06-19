@@ -154,7 +154,7 @@ function App() {
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-96 object-cover rounded"
+                className="w-full h-[250px]sm :h-[300px]md :h-[450px]lg :h-[600px] object-cover rounded"
               />
               <h3 className="mt-4 text-xl font-heading">{item.title}</h3>
               <ul className="mt-2 text-sm text-gray-600 font-body text-left list-disc list-inside">
