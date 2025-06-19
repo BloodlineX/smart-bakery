@@ -315,7 +315,7 @@ function App() {
             alt="Bakery Owner"
             className="w-32 h-32 rounded-full object-cover mb-4"
           />
-          <h3 className="text-xl font-heading">Bhaskar Chauhan</h3>
+          <h3 className="text-xl font-heading">BLOODLINE~X </h3>
           <p className="font-body">Founder of The Golden Ratio Bakery</p>
         </div>
       </section>
